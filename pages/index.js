@@ -37,14 +37,14 @@ export default function Home() {
             <h1>Primeiro Widget</h1>
           </Widget.Header>
          <Widget.Content>
-            <p>OPA</p>
+            <p>Conteúdo do Primeiro Container</p>
          </Widget.Content>
         
         </Widget>
         <Widget>
           <Widget.Content>
             <h1> Segundo Widget</h1>
-            <p>Opa2</p>
+            <p>Conteúdo do Segundo Container</p>
           </Widget.Content>
           </Widget>
           <Footer/>
