@@ -7,6 +7,8 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 // const Background = styled.div`
 // background-image: url(${db.bg});
@@ -50,12 +52,15 @@ export default function Home() {
             <p> Olá tudo baum?</p>
             <form onSubmit={handleSubmit}>
 
-              <Widget.Input
+              <Input
+                name="nomeDoUsuario"
                 placeholder="Preencha seu nome"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
               />
-              <Widget.Button type="submit" disabled={name.length === 0}> JOGAR </Widget.Button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Bora jogar! ${name}`}
+              </Button>
             </form>
 
           </Widget.Content>

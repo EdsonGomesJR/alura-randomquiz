@@ -4,7 +4,7 @@ const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.mainBg};
+  background-color: ${({ theme }) => theme.colors.primaryTransparent};
   border-radius: 4px;
   overflow: hidden;
 
@@ -49,34 +49,23 @@ Widget.Content = styled.div`
   
   `;
 
-Widget.Input = styled.input`
-  width: 283px;
-  height: 40px;
-  padding: 16px 8px;
-  border-radius: 4px;
-  background-color:${({ theme }) => theme.colors.mainBg};
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  color: rgba(255, 255, 255, 0.6);
-  border: 1px solid  rgba(255, 255, 255, 0.5);
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
 
-margin-bottom: 24px`;
-
-Widget.Button = styled.button`
-  width: 283px;
-  height: 40px;
-  background-color: #FF9800;
-  color: #fff;
-  font-weight: 700;
-  font-family: 'Lato';
-  font-size: 14px;
-  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24); */
-  border-radius: 4px;
-  line-height: 16px;
-  border-color: transparent;
+  &:hover,
+  &:focus{
+    opacity: .5;
+  }
+  
   `;
+
 export default Widget;
